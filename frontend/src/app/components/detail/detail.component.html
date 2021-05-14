@@ -1,0 +1,57 @@
+<div class="container" style="margin-top: 30px">
+  <div class="row">
+<div class="col-sm-6">
+<app-video-player style="min-height: 400px;" [id]="id" [category]="category" (toFather)="updateVideoId($event)"></app-video-player>
+</div>
+    <div class="col-sm-6">
+      <h2>{{title}}</h2>
+      <p style="font-style:oblique">{{tagline}}</p>
+      <div class="d-flex">
+      <div class="mr-2">{{date}} &nbsp;|</div>
+      <div class="mr-2">&#9733; {{vote_average}}&nbsp; |</div>
+      <div class="mr-2">{{runtime}}</div>
+      </div>
+      <div >Genres: &nbsp;<span *ngFor="let g of genres;index as i">{{g['name']}}<span *ngIf="i!=genres.length-1">,</span> </span> </div>
+      <div >Spoken Languages: &nbsp;<span *ngFor="let g of spoken_languages;index as i">{{g['name']}}<span *ngIf="i!=spoken_languages.length-1">,</span> </span> </div>
+      <br>
+      <div>
+        <div type="button" class="btn btn-primary" (click)="set()" style="font-weight:normal">{{btn_content}}</div>
+
+        <ngb-alert style="margin-top: 10px;" #selfClosingAlert *ngIf="successMessage" [type]="alert_type" (closed)="successMessage = ''">{{ successMessage }}
+        </ngb-alert>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 20px">
+    <h3 style="font-size: 16px;">Description</h3>
+    <p style="font-size: 13px;">{{overview}}</p>
+    <br>
+    <h3 style="font-size: 13px;">Share</h3>
+
+    <button type="button"  class="btn mr-2 btn-1">
+      <a class="twitter-share-button"
+         target="_blank"
+         href="https://twitter.com/intent/tweet?text={{share_content}}"
+         data-size="large"
+         data-text="custom share text"
+         data-url="https://dev.twitter.com/web/tweet-button"
+         data-hashtags="aa,demo"
+         data-via="twitterdev"
+         data-related="twitterapi,twitter"><img style="width: 100%;height: 100%" src="assets/twitter.png"></a>
+    </button>
+    <button type="button" class="btn mr-2 btn-1">
+      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/watch?v={{video_key}}" class="fb-xfbml-parse-ignore"><img style="width: 100%;height: 100%" src="assets/facebook.png"></a></div>
+    </button>
+
+  </div>
+  <br>
+  <br>
+  <app-cast [id]="id" [category]="category"></app-cast>
+  <br>
+  <app-reviews [id]="id" [category]="category"></app-reviews>
+  <br>
+
+</div>
+<app-multi-carousel  [sid]="id" [category]="category" [direction]="recommend_movies" [title] = "recommend_movies_title"></app-multi-carousel>
+<br>
+<app-multi-carousel [sid]="id" [category]="category" [direction]="similar_movies" [title] = "similar_movies_title"></app-multi-carousel>

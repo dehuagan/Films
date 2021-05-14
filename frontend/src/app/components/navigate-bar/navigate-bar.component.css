@@ -1,0 +1,52 @@
+.form-control:focus{
+  background-color: black;
+  outline:none;box-shadow: none;
+  border-bottom: white 2px solid;
+  /*border: none;*/
+}
+.form-control{
+  border: none;
+  padding: 0;
+  border-bottom: white 2px solid;
+  background-color: black;
+  width: 200px;
+  border-radius: 0;
+}
+.nav-link{
+  color: #ffffff4d;
+}
+.nav-bg-color{
+  background-color: black;
+}
+.dropdown-menu.show button{
+  color: white;
+  font-size: 1px;
+
+}
+.dropdown-menu,
+.dropdown-menu>li>a {
+  color: #FFF;
+  background-color:rgb(5,9,50);
+  padding: 0;
+}
+.dropdown-menu>li>a:hover {
+  color: #FFF;
+  background-color: rgb(5,9,50);
+}
+
+.dropdown-menu{
+  padding: 0;
+}
+
+.dropdown-item{
+  padding: 3px;
+
+}
+
+/*#typeahead-template{*/
+/*  background-color: rgb(5,9,50);*/
+/*  */
+/*}*/
+a:hover{
+  cursor: pointer;
+}

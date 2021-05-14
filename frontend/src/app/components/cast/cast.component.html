@@ -1,0 +1,44 @@
+<h3>Full Cast And Crew</h3>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{person_name}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-sm-3" style="min-height: 250px;"> <img style="width: 100%" [src]="person_profile_path"> </div>
+      <div class="col-sm-9">
+        <div>Birth: {{person_birthday}}</div>
+        <div>Birth Place: {{person_place_of_birth}}</div>
+        <div>Gender: {{person_gender}}</div>
+        <div>Known for: {{person_known_for_department}}</div>
+        <div>Also Known as: <span *ngFor="let g of person_also_known_as;index as i">{{g}}<span *ngIf="i!=person_also_known_as.length-1">,</span>
+      </span>
+        </div>
+        <br>
+        <div><app-external [pid]="cur_person_id"></app-external></div>
+      </div>
+    </div>
+    <div>
+      <h3>Biography</h3>
+      <p>{{person_biography}}</p>
+    </div>
+
+  </div>
+
+</ng-template>
+<div class="d-flex flex-row">
+<div *ngFor="let cast of cast_array" type="button" class="col" (click)="open(content, cast['id'],cast['profile_path'])">
+  <div class="card" style="width: 150px;">
+    <img class="card-img-top" [src]="cast['profile_path']" alt="Card image" style="width:100%; height: 100%">
+    <div class="card-body">
+      <p style="font-size: 10px; font-weight: bold" class="card-title">{{cast['name']}}</p>
+      <p style="font-size: 10px;font-weight: bold">As</p>
+
+      <p style="font-size: 8px" class="card-text">{{cast['character']}}</p>
+    </div>
+  </div>
+</div>
+</div>

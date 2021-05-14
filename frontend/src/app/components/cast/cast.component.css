@@ -1,0 +1,35 @@
+.btn{
+  width: 280px;
+  height: 250px;
+}
+
+.flex-row{
+  /*height: 300px;*/
+  displey:-webkit-flex;
+  /*display: flex;*/
+  -webkit-flex-flow:row nowrap;
+  flex-flow:row nowrap;
+  overflow-x: auto;
+  list-style: none;
+
+
+}
+div{
+  color: black;
+}
+
+.card-body{
+  padding: 0;
+  text-align: center;
+}
+
+p{
+  margin: 0;
+}
+
+/*.card{*/
+/*  border-radius: 0.5px;*/
+/*}*/
+/*.card{*/
+/*  border-radius: 0.35rem;*/
+/*}*/

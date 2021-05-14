@@ -1,0 +1,43 @@
+<div class="container d-none d-md-block" style="min-height: 500px; margin-top: 10px;">
+  <div *ngIf="notExist" style="color: white; margin-top: 50px;"><h3 style="text-align: center">{{content}}</h3></div>
+  <div *ngIf="!notExist">
+    <h3 style="color: white"> My WatchList</h3>
+    <div class="row" style="margin-top: 30px;width: 100%">
+  <div *ngFor="let item of items; index as i" class="col-sm-2" style="margin-bottom: 50px;">
+<!--    <div class="row justify-content-center">-->
+    <div class="card card-1" >
+    <a (click)="jump(item['id'],item['category'],item['img'])">
+      <div class="picsum-img-wrapper">
+        <img [src]="item['img']" alt="" class="image">
+
+      </div>
+    </a>
+    </div>
+<!--    </div>-->
+  </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="d-lg-none" style="min-height: 500px; margin-top: 10px;">
+  <div *ngIf="notExist" style="color: white; margin-top: 50px;"><h3 style="text-align: center">{{content}}</h3></div>
+  <div *ngIf="!notExist">
+    <h3 style="color: white"> My WatchList</h3>
+<!--    <div class="row" style="margin-top: 30px;width: 100%">-->
+      <div *ngFor="let item of items; index as i" class="col-sm-2" style="margin-bottom: 50px;">
+            <div class="row justify-content-center">
+        <div class="card card-1" >
+          <a (click)="jump(item['id'],item['category'],item['img'])">
+            <div class="picsum-img-wrapper">
+              <img [src]="item['img']" alt="" class="image">
+
+            </div>
+          </a>
+        </div>
+        <!--    </div>-->
+      </div>
+    </div>
+  </div>
+
+</div>

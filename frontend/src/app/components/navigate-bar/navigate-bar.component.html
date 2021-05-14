@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md nav-bg-color navbar-dark">
+  <!-- Brand -->
+
+  <a class="navbar-brand" [routerLink]="['/']">USC Films</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav mr-auto text-right">
+      <li class="nav-item">
+
+        <a class="nav-link" [routerLink]="['/']">Home</a>
+        <!--        <a class="nav-link" href="#">Link</a>-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/mylist']">MyList</a>
+      </li>
+
+    </ul>
+    <input style="color: white" placeholder="search" id="typeahead-template" type="text" class="form-control pull-right"  [resultTemplate]="rt"  [ngbTypeahead]="search" [inputFormatter]="formatter" />
+    <div style="background-color:rgb(5,9,50);">
+    <ng-template #rt let-r="result" let-t="term" style="padding: 0"  class="dropdown-menu my-type">
+
+      <a (click)="jump(r['id'],r['media_type'],r['poster_path'])" >
+      <img [src]="r['backdrop_path']" class="mr-1" style="width: 50px;margin-right: 15px;">
+      <ngb-highlight [result]="r.title" [term]="t"></ngb-highlight>
+
+      </a>
+    </ng-template>
+  </div>
+  </div>
+</nav>

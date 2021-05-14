@@ -1,0 +1,47 @@
+<div class="d-lg-none">
+
+  <h3 style="text-align: center">{{title}}</h3>
+<ngb-carousel #carousel [interval]="5000" [pauseOnHover]="true" [pauseOnFocus]="true"
+              [showNavigationIndicators]="false" class="carousel1">
+  <ng-template ngbSlide *ngFor="let img of images_mobile; index as i">
+
+      <div class="row justify-content-center">
+<div class="card" style="width: 200px">
+<!--    <a routerLink="/detail/{{ids_mobile[i]}}&{{this.category}}">-->
+  <a (click)="jump(ids_mobile[i],this.category, img)">
+      <div class="picsum-img-wrapper">
+        <img [src]="img" alt="" class="image" onerror="this.src='./assets/movie_placeholder.png'">
+      </div>
+    </a>
+      </div></div>
+
+  </ng-template>
+</ngb-carousel>
+</div>
+<!--<div *ngIf="notMobile">-->
+<div class="d-none d-md-block">
+
+  <div class="container" style="margin-bottom: 30px;"><h3>{{title}}</h3></div>
+<ngb-carousel #carousel1 [interval]="5000" class="carousel2"  [pauseOnHover]="true" [pauseOnFocus]="true"
+              [showNavigationIndicators]="true" >
+
+  <ng-template  ngbSlide *ngFor="let img of images; index as i">
+  <div class="container">
+    <div class="row">
+    <div *ngFor="let singleImg of img; index as j" class="col-2">
+
+      <a (click)="jump(ids[i][j],this.category, singleImg)">
+      <div class="picsum-img-wrapper">
+        <img [src]="singleImg" alt="" class="image" onerror="this.src='./assets/movie_placeholder.png'">
+
+      </div>
+    </a>
+
+    </div>
+    </div>
+  </div>
+  </ng-template>
+
+</ngb-carousel>
+  </div>
+

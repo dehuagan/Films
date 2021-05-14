@@ -1,0 +1,12 @@
+<button *ngIf="imdb_id!=null" type="button" class="btn-1 btn  mr-2" placement="top" ngbTooltip="Visit IMDB" tooltipClass="{{tooltip}}">
+  <a target="_blank" href="https://www.imdb.com/name/{{imdb_id}}"><img style="width: 100%;height: 100%" src="assets/imdb.png"></a>
+</button>
+<button *ngIf="instagram_id!=null" type="button" class="btn-1 btn  mr-2" placement="top" ngbTooltip="Visit Instagarm">
+  <a target="_blank" href="https://instagram.com/{{instagram_id}}"><img style="width: 100%;height: 100%" src="assets/instagram.png"></a>
+</button>
+<button *ngIf="facebook_id!=null" type="button" class="btn-1 btn  mr-2" placement="top" ngbTooltip="Visit Facebook">
+  <a target="_blank" href="http://facebook.com/{{facebook_id}}"><img style="width: 100%;height: 100%" src="assets/facebook.png"></a>
+</button>
+<button *ngIf="twitter_id!=null" type="button" class="btn-1 btn  mr-2" placement="top" ngbTooltip="Visit Twitter">
+  <a target="_blank" href="https://twitter.com/{{twitter_id}}"><img style="width: 100%;height: 100%" src="assets/twitter.png"></a>
+</button>

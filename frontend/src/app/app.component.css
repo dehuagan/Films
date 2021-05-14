@@ -1,0 +1,21 @@
+/*.jumbotron{*/
+/*  padding:0;*/
+/*}*/
+
+.content{
+  background-color: rgb(5,9,50);
+}
+.form-control:focus{
+  background-color: black;
+  outline:none;box-shadow: none;
+  border-bottom: white 2px solid;
+  /*border: none;*/
+}
+.form-control{
+  border: none;
+  padding: 0;
+  border-bottom: white 2px solid;
+  background-color: black;
+  width: 200px;
+  border-radius: 0;
+}

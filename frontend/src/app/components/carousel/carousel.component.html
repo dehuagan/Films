@@ -1,0 +1,15 @@
+<div class="container" style="margin-top:10px">
+<ngb-carousel #carousel [interval]="5000" [pauseOnHover]="true" [pauseOnFocus]="true"
+              [showNavigationIndicators]='showIndicators' class="carousel">
+  <ng-template ngbSlide *ngFor="let img of images; index as i">
+<!--    <a routerLink="/detail/{{ids[i]}}&movie">-->
+    <a (click)="jump(ids[i],'movie', poster[i])">
+      <div class="picsum-img-wrapper">
+        <img [src]="img" alt="" class="image">
+        <div class="carousel-caption">{{titles[i]}}</div>
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
+
+</div>
