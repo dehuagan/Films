@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:layout_height="210dp"
+    android:layout_width="match_parent">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="10dp">
+
+    <ImageView
+        android:id="@+id/result_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/result_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="left"/>
+    <TextView
+        android:id="@+id/result_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_gravity="right"
+        android:drawableStart="@drawable/ic_baseline_star_24"/>
+    <TextView
+        android:id="@+id/search_result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"/>
+
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

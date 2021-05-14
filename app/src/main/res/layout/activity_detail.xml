@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Detail">
+<!--        <ScrollView-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:paddingRight="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fillViewport="true">-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            app:trimExpandedText="Show more"
+            app:trimCollapsedText="Show less"
+            android:layout_height="wrap_content"/>
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="100px"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            app:trimExpandedText="Show more"
+            app:trimCollapsedText="Show less"
+            app:trimMode="trimModeLine"
+            app:trimLength="3"
+            android:paddingLeft="5dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:paddingLeft="5dp"
+            android:textSize="80px"
+            android:text="Overview" />
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="60px"
+            android:textColor="@color/white"
+            app:trimExpandedText="Show more"
+            app:trimCollapsedText="Show less"
+            app:trimMode="trimModeLength"
+            app:trimLength="150"
+            app:colorClickableText="#8C8888"
+            android:paddingLeft="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:paddingLeft="5dp"
+            android:textSize="80px"
+            android:text="Genres" />
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/genres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="60px"
+            android:textColor="@color/white"
+            app:trimExpandedText="Show more"
+            app:trimCollapsedText="Show less"
+            app:trimMode="trimModeLength"
+            app:trimLength="150"
+            app:colorClickableText="#8C8888"
+            android:paddingLeft="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:paddingLeft="5dp"
+            android:textSize="80px"
+            android:text="Year" />
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="60px"
+            android:textColor="@color/white"
+            app:trimExpandedText="Show more"
+            app:trimCollapsedText="Show less"
+            app:trimMode="trimModeLength"
+            app:trimLength="150"
+            app:colorClickableText="#8C8888"
+            android:paddingLeft="5dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/add_to_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dark"
+                android:layout_marginLeft="5dp" />
+
+
+            <ImageButton
+                android:id="@+id/facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_facebook_24"
+                android:layout_marginLeft="5dp"
+                android:background="@color/dark"/>
+
+
+            <ImageButton
+                android:id="@+id/twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_twitter_logo_dialog"
+                android:layout_marginLeft="5dp"
+                android:background="@color/dark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cast_section"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cast_view"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:id="@+id/review_section"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:paddingLeft="5dp"
+            android:textSize="80px"
+            android:text="Recommended Picks" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_view"
+            android:layout_width="match_parent"
+            android:layout_height="170dp" />
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+

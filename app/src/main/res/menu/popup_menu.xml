@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/popup_tmdb"
+        android:title="Open in TMDB" />
+
+    <item
+        android:id="@+id/popup_fb"
+        android:title="Share on Facebook" />
+
+    <item
+        android:id="@+id/popup_twitter"
+        android:title="Share on Twitter" />
+
+<!--    <item-->
+<!--        android:id="@+id/add_or_move_popup"-->
+<!--        android:title="Add to Watchlist" />-->
+
+</menu>
